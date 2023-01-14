@@ -1,3 +1,14 @@
+.nav{
+  margin: 1em;
+  a{
+    margin: 1em;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 2em;
+  }
+}
+
 .Cars {
     display: flex;
     flex-direction: column;
@@ -6,6 +17,23 @@
     margin-top: 10rem;
     height: 80vh;
     font-size: 20px;
+    .category{
+      .btn{
+        width: 5rem;
+        height: 2rem;
+        margin: 0.3rem;
+        border: none;
+        &:hover{
+          background-color: rgb(212, 210, 210);
+          cursor: pointer;
+        }
+        &:active{
+          outline: none;
+          border: none;
+          background-color: rgb(181, 176, 176);
+        }
+      }
+    }
   .years {
     display: flex;
     gap: 10px;
@@ -32,7 +60,7 @@
   .filter:hover,
   .active {
     background-color: #48b393;
-    color: white;
+    color: rgb(163, 45, 45);
     cursor: pointer;
     display: flex;
     justify-content: center;
