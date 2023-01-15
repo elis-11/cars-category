@@ -21,7 +21,7 @@ function Category() {
   };
 
   return (
-    <div className="Cars">
+    <div className="Items">
       <h2>Cars Category JS</h2>
       <div className="category">
         {buttons.map((category) => (
@@ -35,9 +35,9 @@ function Category() {
           </button>
         ))}
       </div>
-      <div className="cars">
+      <div className="items">
         {cars.map((car) => (
-          <div key={car.id} className="car">
+          <div key={car.id} className="item">
             <div className="name">{car.name}</div>
             <div className="name">{car.year}</div>
             <div className="name">{car.category}</div>

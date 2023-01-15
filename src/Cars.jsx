@@ -28,7 +28,7 @@ export const Cars = () => {
   let filteredCars = filteredYear(cars);
 
   return (
-    <div className="Cars">
+    <div className="Items">
       <h2>Selected Cars JS</h2>
       <div className="years">
         {years.map((year) => (
@@ -41,9 +41,9 @@ export const Cars = () => {
           </button>
         ))}
       </div>
-      <div className="cars">
+      <div className="items">
         {filteredCars.map((car) => (
-          <div key={car.id} className="car">
+          <div key={car.id} className="item">
             <div className="name">{car.name}</div>
             <div className="name">{car.year}</div>
             <img src={car.url} alt={car.name} />
