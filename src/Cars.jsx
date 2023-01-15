@@ -6,22 +6,21 @@ export const Cars = () => {
   const [cars, setCars] = useState(carsJson);
   const [selectedYear, setSelectedYear] = useState();
   console.log("cars", cars);
+  const years = [2018, 2019, 2020]
 
   const handleChangeYear = (year) => {
     const inputYear = Number(year);
-    console.log("year", year);
     if (inputYear === selectedYear) {
       setSelectedYear("");
     } else {
       setSelectedYear(year);
     }
   };
-
-  const filteredYear = (filteredData) => {
+  const filteredYear = () => {
     if (!selectedYear) {
-      filteredData;
+      return cars
     }
-    const filteredCars = filteredData.filter(
+    const filteredCars = cars.filter(
       (car) => car.year === selectedYear
     );
     return filteredCars;
@@ -32,16 +31,15 @@ export const Cars = () => {
     <div className="Cars">
       <h2>Selected Cars JS</h2>
       <div className="years">
-        {[2018, 2019, 2020].map((year) => (
-          <div
+        {years.map((year) => (
+          <button
             key={year}
             onClick={() => handleChangeYear(year)}
             className={selectedYear === year ? "active" : "filter"}
           >
             {year}
-          </div>
+          </button>
         ))}
-        <div className="all">All</div>
       </div>
       <div className="cars">
         {filteredCars.map((car) => (
