@@ -1,0 +1,27 @@
+[
+    {
+        "id": "s1",
+        "name": "Table Tennis",
+        "category": "Indoor"
+    },
+    {
+        "id": "s2",
+        "name": "Football",
+        "category": "Outdoor"
+    },
+    {
+        "id": "s3",
+        "name": "Swimming",
+        "category": "Aquatics"
+    },
+    {
+        "id": "s4",
+        "name": "Chess",
+        "category": "Indoor"
+    },
+    {
+        "id": "s5",
+        "name": "BaseBall",
+        "category": "Outdoor"
+    }
+]
