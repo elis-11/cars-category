@@ -37,7 +37,8 @@ export const Sport = () => {
       <div className="category">
         {categories.map((category, index) => (
           <button
-            className="btn"
+            // className="btn"
+            className={selectedCategory === category ? "active" : "filter"}
             key={index}
             onClick={() => handleCategoryChange(category)}
           >

@@ -9,7 +9,7 @@ function Category() {
   const allCategory = ["All", ...new Set(carsJson.map((car) => car.category))];
   console.log(allCategory);
   const [buttons, setButtons] = useState(allCategory);
-  console.log(buttons)
+  console.log(buttons);
 
   const filterCars = (button) => {
     if (button === "All") {
@@ -17,7 +17,7 @@ function Category() {
       return;
     }
     const filteredCars = carsJson.filter((car) => car.category === button);
-    console.log(filteredCars)
+    console.log(filteredCars);
     setCars(filteredCars);
   };
 
@@ -28,7 +28,8 @@ function Category() {
         {buttons.map((category) => (
           <button
             key={category}
-            className="btn"
+            // className="btn"
+            className={allCategory === category ? "active" : "filter"}
             type="button"
             onClick={() => filterCars(category)}
           >
