@@ -6,6 +6,7 @@ export const Sport = () => {
   const sport = sportJson;
   const [sportList, setSportList] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState();
+  const categories = ["All", "Indoor", "Outdoor", "Aquatics"];
   console.log("sportJson:", sportJson);
   console.log("sportList:", sportList);
 
@@ -23,10 +24,10 @@ export const Sport = () => {
   const filteredList = useMemo(filterList, [selectedCategory, sportList]);
 
   const handleCategoryChange = (category) => {
-    if(category === selectedCategory){
-        setSelectedCategory('')
-    } else{
-        setSelectedCategory(category)
+    if (category === selectedCategory) {
+      setSelectedCategory("");
+    } else {
+      setSelectedCategory(category);
     }
   };
 
@@ -34,8 +35,12 @@ export const Sport = () => {
     <div className="Items">
       <h2>Selected Sport</h2>
       <div className="category">
-        {["All", "Indoor", "Outdoor", "Aquatics"].map((category, i) => (
-          <button className="btn" key={i} onClick={()=>handleCategoryChange(category)}>
+        {categories.map((category, index) => (
+          <button
+            className="btn"
+            key={index}
+            onClick={() => handleCategoryChange(category)}
+          >
             {category}
           </button>
         ))}

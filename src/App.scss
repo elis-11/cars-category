@@ -21,7 +21,9 @@
   height: 80vh;
   font-size: 20px;
   .category {
-    margin: 1em;
+    display: flex;
+    gap: 10px;
+    margin: 10px;
     .btn {
       width: 5rem;
       height: 2rem;

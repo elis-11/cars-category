@@ -4,6 +4,7 @@ import "./App.scss";
 
 function Category() {
   const [cars, setCars] = useState(carsJson);
+  console.log("cars", cars);
 
   const allCategory = ["All", ...new Set(carsJson.map((car) => car.category))];
   console.log(allCategory);
