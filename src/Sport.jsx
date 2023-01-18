@@ -29,14 +29,13 @@ export const Sport = () => {
         setSelectedCategory(category)
     }
   };
-  console.log("handleCategoryChange", handleCategoryChange);
 
   return (
     <div className="Items">
       <h2>Selected Sport</h2>
       <div className="category">
         {["All", "Indoor", "Outdoor", "Aquatics"].map((category, i) => (
-          <button key={i} onClick={()=>handleCategoryChange(category)}>
+          <button className="btn" key={i} onClick={()=>handleCategoryChange(category)}>
             {category}
           </button>
         ))}
@@ -46,6 +45,7 @@ export const Sport = () => {
           <div key={sport.id} className="item">
             <div className="title">{sport.name}</div>
             <div className="category">{sport.category}</div>
+            <img src={sport.url} alt={sport.name} />
           </div>
         ))}
       </div>

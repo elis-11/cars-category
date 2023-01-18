@@ -2,26 +2,31 @@
     {
         "id": "s1",
         "name": "Table Tennis",
-        "category": "Indoor"
+        "category": "Indoor",
+        "url": "https://source.unsplash.com/100x50/?tennis"
     },
     {
         "id": "s2",
         "name": "Football",
-        "category": "Outdoor"
+        "category": "Outdoor",
+        "url": "https://source.unsplash.com/100x50/?football"
     },
     {
         "id": "s3",
         "name": "Swimming",
-        "category": "Aquatics"
+        "category": "Aquatics",
+        "url": "https://source.unsplash.com/100x50/?swimming"
     },
     {
         "id": "s4",
         "name": "Chess",
-        "category": "Indoor"
+        "category": "Indoor",
+        "url": "https://source.unsplash.com/100x50/?chess"
     },
     {
         "id": "s5",
         "name": "BaseBall",
-        "category": "Outdoor"
+        "category": "Outdoor",
+        "url": "https://source.unsplash.com/100x50/?baseball"
     }
 ]

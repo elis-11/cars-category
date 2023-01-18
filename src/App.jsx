@@ -7,16 +7,18 @@ import { Sport } from "./Sport";
 function App() {
   return (
     <div className="App">
-      <div className="nav">
+      <nav className="nav">
         <NavLink to="/">Category</NavLink>
         <NavLink to="/cars">Cars</NavLink>
         <NavLink to="/sport">Sport</NavLink>
-      </div>
+      </nav>
+      <div className="content">
       <Routes>
         <Route path="" element={<Category />} />
         <Route path="cars" element={<Cars />} />
         <Route path="sport" element={<Sport />} />
       </Routes>
+      </div>
     </div>
   );
 }
